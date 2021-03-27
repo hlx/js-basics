@@ -11,12 +11,12 @@ console.log(message);
 
 //properties inside const_object can still be modified
 const const_object = {
-    name: "John",
-    age : 30
-}
+  name: "John",
+  age: 30,
+};
 const_object.name = "Sarah";
 
-const numbers = [1,2,3,4,5];
+const numbers = [1, 2, 3, 4, 5];
 numbers.push(6);
 
 console.log(const_object);
