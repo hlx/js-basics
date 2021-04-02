@@ -71,4 +71,15 @@ if (newHeading.hasAttribute("class")) {
     console.log("class not added");
 }
 
+// events
+newHeading.addEventListener("click", eventFunction);
+
+function eventFunction(e) {
+    console.log("hello world click!");
+
+    e.preventDefault(); //e  - event object
+    e.target.innerText = "Clicked!!";
+    e.target.removeEventListener("click", eventFunction);
+}
+
 console.log(oldHeading);
