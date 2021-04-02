@@ -82,4 +82,21 @@ function eventFunction(e) {
     e.target.removeEventListener("click", eventFunction);
 }
 
-console.log(oldHeading);
+const list = document.querySelector("ul.list");
+// we also have lis as items
+
+list.addEventListener("click", spanClicked);
+
+function spanClicked(e) {
+    if (e.target.nodeName === "SPAN") {
+        let index = Array.prototype.indexOf.call(
+            list.children,
+            e.target.parentNode
+        );
+        //let index = Array.from(list.children).indexOf(e.target.parentNode);
+        console.log(`span clicked - removing list item ${index + 1}`);
+        e.target.parentNode.remove();
+    }
+}
+
+console.log(items);
