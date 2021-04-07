@@ -6,6 +6,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
 
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"
+        />
+
         <!-- <script src="scripts/console.js"></script> -->
         <!-- <script src="scripts/variables.js"></script> -->
         <!-- <script src="scripts/data_types.js"></script> -->
@@ -20,24 +25,45 @@
         <!-- <script src="scripts/scope.js"></script> -->
         <!-- <script src="scripts/closure.js"></script> -->
         <!-- <script src="scripts/import.js"></script> -->
-        <script src="./scripts/class.js"></script>
-        <script src="./scripts/async.js"></script>
+        <!-- <script src="./scripts/class.js"></script> -->
     </head>
 
     <body>
-        <h1>Hello there....</h1>
-        <p id="test-par">be sure to check out console output.</p>
+        <section id="sandbox">
+            <h1>Hello there....</h1>
+            <p id="test-par">be sure to check out console output.</p>
 
-        <h5>A title to be replaced</h5>
-        <div id="test">
-            <ul class="list">
-                <li class="listItem">aaa <span>[x]</span></li>
-                <li class="listItem">bbb <span>[x]</span></li>
-                <li class="listItem">ccc <span>[x]</span></li>
-                <li class="listItem">ddd <span>[x]</span></li>
-            </ul>
+            <h5>A title to be replaced</h5>
+            <div id="test">
+                <ul class="list">
+                    <li class="listItem">aaa <span>[x]</span></li>
+                    <li class="listItem">bbb <span>[x]</span></li>
+                    <li class="listItem">ccc <span>[x]</span></li>
+                    <li class="listItem">ddd <span>[x]</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="container">
+            <button id="button">Get Data</button>
+            <br /><br />
+            <div id="output"></div>
+
+            <button id="button1">Get Customer</button>
+            <button id="button2">Get Customers</button>
+            <br /><br />
+            <h5>Customer</h5>
+            <div id="customer"></div>
+            <h5>Customers</h5>
+            <div id="customers"></div>
+
+            <h5>Jokes</h5>
+            <button id="button3">Get Joke</button>
+            <div id="jokes"></div>
         </div>
+
         <!-- <script src="scripts/DOM.js"></script> -->
         <!-- <script src="scripts/storage.js"></script> -->
+        <script src="./scripts/async.js"></script>
     </body>
 </html>
