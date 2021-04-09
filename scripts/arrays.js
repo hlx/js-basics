@@ -17,15 +17,14 @@ numbers.shift();
  .sort
 */
 
-
 numbers.sort(); //sorts like strings
-numbers.sort((x,y)=> x-y); // sorts like numbers, y-x sorts in reverse
+numbers.sort((x, y) => x - y); // sorts like numbers, y-x sorts in reverse
 
 //find
- function over10(num) {
-     return num > 10;
- }
- val = numbers.find(over10);
+function over10(num) {
+    return num > 10;
+}
+val = numbers.find(over10);
 
 console.log(numbers);
 console.log(val);
