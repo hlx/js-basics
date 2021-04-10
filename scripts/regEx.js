@@ -23,9 +23,19 @@
 // console.log(newStr);
 
 let re;
+//literal
 re = /hello/;
+re = /hello/i;
 
-const str = "Hello world";
+//metacharacter symbols
+re = /^h/i; //must start with
+re = /d$/i; //must end with
+re = /he.lo/i; //matches any one character
+re = /h*o/i; //matches any character
+re = /gre?a?y/i; //matches optional character
+re = /gre?a?y\?/i; //escape character
+
+const str = "Gray?";
 const result = re.exec(str);
 console.log(result);
 
