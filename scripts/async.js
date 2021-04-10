@@ -1,3 +1,31 @@
+async function foo() {
+    const promise = new Promise((res, rej) => {
+        setTimeout(() => res("Hello!"), 1000);
+    });
+
+    const error = false;
+    if (!error) {
+        const res = await promise;
+        return res;
+    } else {
+        await Promise.reject(new Error("something went wrong"));
+    }
+}
+
+foo()
+    .then(text => console.log(text))
+    .catch(err => console.log(err));
+
+async function getUsers() {
+    const response = await fetch("https://jsonplaceholder.typicode.com/users");
+    const data = await response.json();
+    return data;
+}
+
+getUsers().then(users => console.log(users));
+
+/** OLD AJAX STUFF */
+
 document.getElementById("sandbox").style.display = "none";
 
 document.getElementById("button").addEventListener("click", loadData);
@@ -63,7 +91,7 @@ function loadCustomers(e) {
 
             let output = "";
 
-            customers.forEach((customer) => {
+            customers.forEach(customer => {
                 output += `
                 <ul>
                     <li>ID: ${customer.id} </li>
