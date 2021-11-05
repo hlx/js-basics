@@ -20,5 +20,4 @@ val = window.location;
  window.navigator
 */
 
-
 console.log(val);
